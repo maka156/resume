@@ -16,6 +16,9 @@ class Footer extends React.Component<props,State> {
               <Card.Link href="https://github.com/maka156" target="_blank">GitHub</Card.Link>
             </Col>
             <Col>
+             <Card.Link href="https://www.upwork.com/o/profiles/users/~01a90c4964f2d419d3/" target="_blank">UpWork</Card.Link>
+            </Col>
+            <Col>
               mjcanache@gmail.com
             </Col>
           </Row>
