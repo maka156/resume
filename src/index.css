@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.h7 {
+  font-size: 0.9rem;
+}
+
+.profile {
+  width: 40%;
+}
+
+.headline {
+  text-align: center;
+  background-color:#ebe8e4;
+}
+
+.border {
+  border: 4px solid #ffffff !important;
+}
+
+.profile-pos {
+  margin-top: -20%;
+  margin-left: 4%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+}
