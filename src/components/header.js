@@ -29,11 +29,11 @@ class Header extends React.Component<props,State> {
                 <span className="mr-2">
                   <FontAwesomeIcon icon={faLanguage}/>
                 </span>
-                <Button variant="link" onClick={() => this.handlerLang('en')}>
-                  en
-                </Button>
-                | <Button variant="link" onClick={() => this.handlerLang('es')}>
+                <Button variant="link" onClick={() => this.handlerLang('es')}>
                   es
+                </Button>
+                | <Button variant="link" onClick={() => this.handlerLang('en')}>
+                  en
                 </Button>
               </p>
               <p className="text-right">

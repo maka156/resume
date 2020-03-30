@@ -53,4 +53,13 @@ code {
     height: 50px;
     width: 50px;
   }
+
+  .profile {
+    width: 60%;
+  }
+
+  .profile-pos {
+    margin-top: -30%;
+    margin-left: 4%;
+  }
 }

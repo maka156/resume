@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
+    "jest": "^25.2.4",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
