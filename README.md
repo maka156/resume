@@ -1,4 +1,4 @@
-# My Resume - Build using React + Redux
+# My Resume - Built using React + Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
