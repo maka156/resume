@@ -4,8 +4,6 @@ import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faLanguage } from "@fortawesome/free-solid-svg-icons";
-import { connect } from "react-redux";
-import { updateLanguageDS } from "../redux/actions/index";
 
 class Header extends React.Component<props,State> {
 
