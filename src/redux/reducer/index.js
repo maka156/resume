@@ -1,10 +1,10 @@
 import { LANGUAGE_DS } from "../constants/action-types";
 
-const initialState = {
+export const initialState = {
   language_ds: {}
 };
 
-function rootReducer(state = initialState, action) {
+export function rootReducer(state = initialState, action) {
   if (action.type === LANGUAGE_DS) {
     return Object.assign({}, state, {
       language_ds: action.payload
@@ -13,5 +13,3 @@ function rootReducer(state = initialState, action) {
 
   return state;
 }
-
-export default rootReducer;

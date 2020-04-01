@@ -1,4 +1,5 @@
 import React from "react";
+import PropType from "prop-types";
 import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
@@ -7,11 +8,6 @@ import { connect } from "react-redux";
 import { updateLanguageDS } from "../redux/actions/index";
 
 class Header extends React.Component<props,State> {
-
-  handlerLang (value) {
-    const lang = value === 'es' ? 'cv-es.json' : 'cv-en.json';
-    this.props.updateLanguageDS(lang);
-  }
 
   render() {
     return (
@@ -29,10 +25,10 @@ class Header extends React.Component<props,State> {
                 <span className="mr-2">
                   <FontAwesomeIcon icon={faLanguage}/>
                 </span>
-                <Button variant="link" onClick={() => this.handlerLang('es')}>
+                <Button variant="link" data-testid="button-es" onClick={() => this.props.onClick('es')}>
                   es
                 </Button>
-                | <Button variant="link" onClick={() => this.handlerLang('en')}>
+                | <Button variant="link" data-testid="button-en" onClick={() => this.props.onClick('en')}>
                   en
                 </Button>
               </p>
@@ -48,8 +44,8 @@ class Header extends React.Component<props,State> {
         <Card.Body>
           <Card.Title className="h4 text-center mb-2">Maria José Canache Guevara</Card.Title>
           <Card.Subtitle className="mb-4 text-muted text-center h4">FullStack Developer</Card.Subtitle>
-          <Card.Text>
-            {this.props.dataHeader.bio}
+          <Card.Text data-testid="text-language">
+            {this.props.bio}
           </Card.Text>
         </Card.Body>
       </Card>
@@ -57,13 +53,14 @@ class Header extends React.Component<props,State> {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    language_ds: state.language_ds
-  };
+Header.propTypes = {
+  onClick: PropType.func,
+  bio: PropType.string
 }
 
-export default connect(
-  mapStateToProps,
-  { updateLanguageDS }
-)(Header);
+Header.defaultProps = {
+  onClick: () => {},
+  bio: ""
+}
+
+export default Header;

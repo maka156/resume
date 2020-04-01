@@ -4,18 +4,18 @@ import { Card, CardDeck } from 'react-bootstrap';
 class Experience extends React.Component<props,State> {
 
   render() {
-    const values = this.props.dataExperience.experience;
+    const experiences = this.props.experiences;
 
-    const listItems = values.map((value) =>
-      <Card key={value.name}>
+    const listItems = experiences.map((experience) =>
+      <Card key={experience.name}>
         <Card.Body>
-          <Card.Title>{value.name} - {value.country}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted h6">{value.role}</Card.Subtitle>
-          <Card.Text>{value.type} - {value.date}</Card.Text>
+          <Card.Title>{experience.name} - {experience.country}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted h6">{experience.role}</Card.Subtitle>
+          <Card.Text>{experience.type} - {experience.date}</Card.Text>
           <p className="headline">Stack</p>
-          <Card.Text>{value.stack}</Card.Text>
+          <Card.Text>{experience.stack}</Card.Text>
           <p className="headline">Responsabilities</p>
-          <Card.Text>{value.responsabilities.map((resp) => {
+          <Card.Text>{experience.responsabilities.map((resp) => {
               return (<li key={resp}>{resp}</li>)
           })}</Card.Text> 
         </Card.Body>

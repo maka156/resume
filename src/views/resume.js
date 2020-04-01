@@ -17,18 +17,19 @@ class Resume extends React.Component<props, state> {
   }
 
   componentDidMount() {
-    this.props.updateLanguageDS('cv-es.json')
+    this.props.updateLanguageDS('es')
       .then(x => this.setState({loaded: true}))
       .catch(console.error);    
   }
 
   render() {
+    const { bio, experience } = this.props.language_ds;
     return (
       (this.state.loaded ?
       <div className="container"> 
-        <Header dataHeader={this.props.language_ds} />
+        <Header bio={bio} onClick={(lang) => this.props.updateLanguageDS(lang)} />
         <Stack />
-        <Experience dataExperience={this.props.language_ds} />
+        <Experience experiences={experience} />
         <Footer/>
       </div>
       :
@@ -43,7 +44,13 @@ function mapStateToProps(state) {
   };
 }
 
+function mapDispatchToProps() {
+  return {
+    updateLanguageDS
+  }
+}
+
 export default connect(
   mapStateToProps,
-  { updateLanguageDS }
+  mapDispatchToProps(),
 )(Resume);
