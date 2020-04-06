@@ -1,4 +1,4 @@
-import { LANGUAGE_DS } from "../constants/action-types";
+import { LANGUAGE_DS } from "redux/constants/action-types";
 
 export const initialState = {
   language_ds: {}
